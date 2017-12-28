@@ -1,0 +1,7 @@
+review\api\model\Response.class
+review\api\AppConfig.class
+review\api\service\ReviewServiceImpl.class
+review\api\service\ReviewService.class
+review\api\controller\ReviewController.class
+review\api\model\Request.class
+review\api\repository\ReviewRepository.class
