@@ -20,17 +20,18 @@ public class ReviewServiceImpl implements ReviewService {
     private ReviewRepository reviewRepository;
 
     @Override
-    public Set<CustomerReview> getReviews(String searchParameter) {
-
-        switch(searchParameter) {
-            case "CITY":
-                return reviewRepository.findByCity();
-            case "SOURCE":
-                return reviewRepository.findByCity();
-            case "PROPERTY":
-                return reviewRepository.findByCity();
-            default:
-                return new HashSet<CustomerReview>(reviewRepository.findAll());
+    public List<CustomerReview> getFilteredReviews(String startDate, String endDate,
+                                                   String city, String property, String source) {
+                if(city == null || city.equals("all"))
+                    city = "%";
+                if(property == null || property.equals("all"))
+                    property = "%";
+                if(source == null || source.equals("all"))
+                    source = "%";
+                if(startDate == null)
+                    startDate = "01/01/2000";
+                if(endDate == null)
+                    endDate = "01/01/4000";
+                return reviewRepository.findByFilters(startDate, endDate, city, property, source);
         }
     }
-}

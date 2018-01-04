@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.sybase:jconn3:6.05.19798">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/sybase/jconn3/6.05.19798/jconn3-6.05.19798.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/sybase/jconn3/6.05.19798/jconn3-6.05.19798-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/sybase/jconn3/6.05.19798/jconn3-6.05.19798-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

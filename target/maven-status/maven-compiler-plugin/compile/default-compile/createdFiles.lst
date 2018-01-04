@@ -1,7 +1,10 @@
-review\api\model\Response.class
-review\api\AppConfig.class
+review\api\AppBootstraper.class
+review\api\config\SecurityConfig.class
+review\api\config\AppConfig.class
 review\api\service\ReviewServiceImpl.class
+review\api\repository\ReviewRepositoryImpl.class
 review\api\service\ReviewService.class
+review\api\model\ReviewRowMapper.class
 review\api\controller\ReviewController.class
-review\api\model\Request.class
+review\api\model\CustomerReview.class
 review\api\repository\ReviewRepository.class

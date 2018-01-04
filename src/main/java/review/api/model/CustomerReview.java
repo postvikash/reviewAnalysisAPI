@@ -1,13 +1,10 @@
 package review.api.model;
 
-import org.springframework.data.annotation.Id;
-
 /**
  * Created by O682559 on 12/16/2017.
  */
 public class CustomerReview {
 
-    @Id
     private String id;
     private String reviewId;
     private String sentenceId;
@@ -167,6 +164,10 @@ public class CustomerReview {
 
     public int hashCode() {
         return this.getId().hashCode();
+    }
+
+    public String toString() {
+        return sentence +"\n"+verbatim+"\n"+sentiment+"\n"+date;
     }
 
 }
