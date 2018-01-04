@@ -12,14 +12,14 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
 // To deploy the WAR file in tomcat container, uncomment the lines in class definition
 
 @SpringBootApplication
-public class AppBootstraper extends SpringBootServletInitializer {
+public class AppBootstraper /*extends SpringBootServletInitializer*/ {
 
     public static void main(String[] args) {
         SpringApplication.run(AppBootstraper.class, args);
     }
 
-    @Override
+    /*@Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder app) {
         return app.sources(AppBootstraper.class);
-    }
+    }*/
 }
