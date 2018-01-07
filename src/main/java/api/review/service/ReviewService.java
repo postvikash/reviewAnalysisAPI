@@ -3,6 +3,7 @@ package api.review.service;
 import api.review.model.CustomerReview;
 import api.review.model.Review;
 
+import java.text.ParseException;
 import java.util.List;
 
 /**
@@ -13,5 +14,5 @@ public interface ReviewService {
                                             String city, String property, String source);
 
     List<Review> getReviewsFromMongoDB(String startDate, String endDate,
-                           String city, String property, String source);
+                           String city, String property, String source) throws ParseException;
 }

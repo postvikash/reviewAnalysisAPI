@@ -10,9 +10,9 @@
     <packaging>war</packaging>
 
     <parent>
-        <groupId>com.jpmorgan.am.cca.moneta.boot</groupId>
-        <artifactId>moneta-boot-starter-parent</artifactId>
-        <version>1.4.2.RELEASE</version>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.4.7.RELEASE</version>
     </parent>
 
     <dependencies>
@@ -26,12 +26,7 @@
             <artifactId>spring-jdbc</artifactId>
             <version>3.0.3.RELEASE</version>
         </dependency>
-        <!-- Sybase jConnect driver -->
-        <dependency>
-            <groupId>com.sybase</groupId>
-            <artifactId>jconn3</artifactId>
-            <version>6.05.19798</version>
-        </dependency>
+
         <!-- mark the embedded servlet container as provided while deploying onto tomcat -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -47,6 +42,14 @@
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-mongodb</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.17</version>
+            <type>jar</type>
+            <scope>compile</scope>
         </dependency>
 
     </dependencies>

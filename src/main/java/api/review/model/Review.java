@@ -5,59 +5,112 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
+import java.util.Date;
+
 @Document(collection = "testing_output")
 public class Review {
 
     @Id
     private String id;
-    @Field("Review Id")
-    private String reviewId;
-    @Field("Sentence Id")
-    private String sentenceId;
-    @Field("L3")
-    private String l3;
-    @Field("Sentiment")
-    private String sentiment;
-    @Field("Sentence")
-    private String sentence;
-    @Field("Verbatim")
-    private String verbatim;
-    @Field("L0")
-    private String l0;
-    @Field("L1")
-    private String l1;
-    @Field("L2")
-    private String l2;
-    @Field("Date")
-    private String date;
-    @Field("Source")
-    private String source;
-    @Field("City")
+    @Field("category")
+    private String category;
+    @Field("city")
     private String city;
-    @Field("Property")
-    private String property;
+    @Field("sentiment")
+    private String sentiment;
+    @Field("rating")
+    private String rating;
+    @Field("source")
+    private String source;
+    @Field("sentiment_text")
+    private String sentimentText;
+    @Field("review")
+    private String review;
+    @Field("hotel")
+    private String hotel;
+    @Field("header")
+    private String header;
+    @Field("sentence_id")
+    private String sentenceId;
+    @Field("l0")
+    private String l0;
+    @Field("l1")
+    private String l1;
+    @Field("l2")
+    private String l2;
+    @Field("l3")
+    private String l3;
+    @Field("date")
+    private String date;
+    @Field("sentence")
+    private String sentence;
+    @Field("unique_id")
+    private String uniqueId;
+    @Field("exec_Status")
+    private String execStatus;
 
-    public Review() {
-
+    public String getCategory() {
+        return category;
     }
 
-    public Review(String revId, String sentId, String l3, String sentiment,
-                          String sentence, String verbatim, String l0, String l1, String l2,
-                          String date, String source, String city, String property) {
-        this.reviewId = revId;
-        this.sentenceId = sentId;
-        this.l3 = l3;
-        this.sentiment = sentiment;
-        this.sentence = sentence;
-        this.verbatim = verbatim;
-        this.l0 = l0;
-        this.l1 = l1;
-        this.l2 = l2;
-        this.date = date;
-        this.source = source;
-        this.city = city;
-        this.property = property;
+    public void setCategory(String category) {
+        this.category = category;
+    }
 
+    public String getRating() {
+        return rating;
+    }
+
+    public void setRating(String rating) {
+        this.rating = rating;
+    }
+
+    public String getSentimentText() {
+        return sentimentText;
+    }
+
+    public void setSentimentText(String sentimentText) {
+        this.sentimentText = sentimentText;
+    }
+
+    public String getReview() {
+        return review;
+    }
+
+    public void setReview(String review) {
+        this.review = review;
+    }
+
+    public String getHotel() {
+        return hotel;
+    }
+
+    public void setHotel(String hotel) {
+        this.hotel = hotel;
+    }
+
+    public String getHeader() {
+        return header;
+    }
+
+    public void setHeader(String header) {
+        this.header = header;
+    }
+
+    public String getUniqueId() {
+        return uniqueId;
+    }
+
+    public void setUniqueId(String uniqueId) {
+        this.uniqueId = uniqueId;
+    }
+
+    public String getExecStatus() {
+        return execStatus;
+    }
+
+    public void setExecStatus(String execStatus) {
+        this.execStatus = execStatus;
     }
 
     public String getId() {
@@ -66,14 +119,6 @@ public class Review {
 
     public void setId(String id) {
         this.id = id;
-    }
-
-    public String getReviewId() {
-        return reviewId;
-    }
-
-    public void setReviewId(String reviewId) {
-        this.reviewId = reviewId;
     }
 
     public String getSentenceId() {
@@ -106,14 +151,6 @@ public class Review {
 
     public void setSentence(String sentence) {
         this.sentence = sentence;
-    }
-
-    public String getVerbatim() {
-        return verbatim;
-    }
-
-    public void setVerbatim(String verbatim) {
-        this.verbatim = verbatim;
     }
 
     public String getL0() {
@@ -164,14 +201,6 @@ public class Review {
         this.city = city;
     }
 
-    public String getProperty() {
-        return property;
-    }
-
-    public void setProperty(String property) {
-        this.property = property;
-    }
-
     public boolean equals(final Review review) {
         if(this.getId().equals(review.getId()))
             return true;
@@ -184,7 +213,7 @@ public class Review {
     }
 
     public String toString() {
-        return sentence +"\n"+verbatim+"\n"+sentiment+"\n"+date;
+        return sentence+"\n"+review+"\n"+sentimentText+"\n"+date;
     }
 
 }

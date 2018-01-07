@@ -1,5 +1,6 @@
 api\review\model\CustomerReview.class
 api\review\AppBootstraper.class
+api\review\repository\UserRepository.class
 api\review\controller\ReviewController.class
 api\review\model\Review.class
 api\review\repository\ReviewRepository.class
@@ -9,5 +10,6 @@ api\review\config\SecurityConfig.class
 api\review\service\ReviewService.class
 api\review\model\ReviewRowMapper.class
 api\review\repository\MongoReviewRepository.class
+api\review\model\User.class
 api\review\repository\ReviewRepositoryImpl.class
 api\review\config\MongoConfig.class

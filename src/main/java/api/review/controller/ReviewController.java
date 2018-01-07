@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import api.review.service.ReviewService;
 
+import java.text.ParseException;
 import java.util.List;
 
 
@@ -31,7 +32,7 @@ public class ReviewController {
         return reviewService.getFilteredReviews(startDate, endDate, city, property, source);
     }
 
-    @RequestMapping("/reviews/{property}/{city}/{source}")
+    @RequestMapping("/reviews/{hotel}/{city}/{source}")
     @ResponseBody
     public List<CustomerReview> getFilteredReviewsLegacy(@RequestParam(value = "startDate", required = false) String startDate,
                                                          @RequestParam (value = "endDate", required = false) String endDate,
@@ -49,20 +50,20 @@ public class ReviewController {
              @RequestParam (value = "endDate", required = false) String endDate,
              @RequestParam (value = "source", required = false) String source,
              @RequestParam (value = "city", required = false) String city,
-             @RequestParam (value = "property", required = false) String property) {
+             @RequestParam (value = "hotel", required = false) String hotel) throws ParseException{
 
-        return reviewService.getReviewsFromMongoDB(startDate, endDate, city, property, source);
+        return reviewService.getReviewsFromMongoDB(startDate, endDate, hotel, city, source);
     }
 
-    @RequestMapping("/mongodb/reviews/{property}/{city}/{source}")
+    @RequestMapping("/mongodb/reviews/{hotel}/{city}/{source}")
     @ResponseBody
     public List<Review> getReviewsForResourceBasedURL
             (@RequestParam(value = "startDate", required = false) String startDate,
              @RequestParam (value = "endDate", required = false) String endDate,
-             @PathVariable final String property,
+             @PathVariable final String hotel,
              @PathVariable final String city,
-             @PathVariable final String source) {
+             @PathVariable final String source) throws ParseException {
 
-        return reviewService.getReviewsFromMongoDB(startDate, endDate, city, property, source);
+        return reviewService.getReviewsFromMongoDB(startDate, endDate, hotel, city, source);
     }
 }
